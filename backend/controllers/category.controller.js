@@ -27,7 +27,7 @@ module.exports.editCategory = async (req, res) => {
   const category = await CategoryModel.findById(req.params.id);
 
   if (!category) {
-    res.status(400).json({ message: "Cette catégorié n'existe pas" });
+    res.status(400).json({ message: "Cette catégorie n'existe pas" });
   }
 
   const updateCategory = await CategoryModel.findByIdAndUpdate(category, req.body, {

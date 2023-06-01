@@ -20,16 +20,16 @@ const structureSchema = mongoose.Schema(
       type: String,
     },
     wallet_amount: {
-      type: String,
-    },
-    is_delete: {
-      type: Boolean,
+      type: Number,
     },
     super_structure_id: {
       type: String,
     },
     categories_ids: {
       type: [String],
+    },
+    is_delete: {
+      type: Boolean,
     },
   },
   {
