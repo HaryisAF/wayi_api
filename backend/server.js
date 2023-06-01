@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/structure", require("./routes/structures.routes"));
+app.use("/category", require("./routes/categories.routes"));
 
 //Lancer le serveur
 app.listen(port, () => console.log("Le serveur a démarré au port " + port) );

@@ -5,6 +5,11 @@ module.exports.getStructures = async (req, res) => {
   res.status(200).json(structures);
 };
 
+module.exports.getStructure = async (req, res) => {
+  const structure =  await StructureModel.findById(req.params.id);
+  res.status(200).json(structure);
+};
+
 module.exports.setStructures = async (req, res) => {
   if (!req.body.name) {
     res.status(400).json({ message: "Merci de remplir les champs obligatoires" });
