@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const structureSchema = mongoose.Schema(
+const responsableSchema = mongoose.Schema(
   {
     name: {
       type: String,
@@ -9,23 +9,14 @@ const structureSchema = mongoose.Schema(
     description: {
       type: String,
     },
-    location: {
-      type: String,
-    },
     phone: {
       type: String,
     },
     email: {
       type: String,
     },
-    wallet_amount: {
-      type: Number,
-    },
-    super_structure_id: {
+    structure_id: {
       type: String,
-    },
-    categories_ids: {
-      type: [String],
     },
     is_delete: {
       type: Boolean,
@@ -36,4 +27,4 @@ const structureSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("structure", structureSchema);
+module.exports = mongoose.model("responsable", responsableSchema);

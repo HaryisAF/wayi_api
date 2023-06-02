@@ -1,15 +1,12 @@
 const mongoose = require("mongoose");
 
-const structureSchema = mongoose.Schema(
+const visitorSchema = mongoose.Schema(
   {
     name: {
       type: String,
       required: true,
     },
     description: {
-      type: String,
-    },
-    location: {
       type: String,
     },
     phone: {
@@ -21,12 +18,6 @@ const structureSchema = mongoose.Schema(
     wallet_amount: {
       type: Number,
     },
-    super_structure_id: {
-      type: String,
-    },
-    categories_ids: {
-      type: [String],
-    },
     is_delete: {
       type: Boolean,
     },
@@ -36,4 +27,4 @@ const structureSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("structure", structureSchema);
+module.exports = mongoose.model("visitor", visitorSchema);
